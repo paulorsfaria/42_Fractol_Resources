@@ -178,6 +178,8 @@ ___
 - [fract-ol — render beautiful sets. | by Braulio Santos | Jan, 2024 | Medium](https://medium.com/@by1jorgesantos/fract-ol-render-beautiful-sets-0699a378b953)
 ## Tools
 - [Online graphing calculator — NumWorks](https://www.numworks.com/simulator/)
+## Videos
+- 
 ## Footnotes
 
 [^1]: [The Fractal Geometry of Nature - Benoit B. Mandelbrot - Google Livros](https://books.google.pt/books?id=0R2LkE3N7-oC&redir_esc=y)
