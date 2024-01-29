@@ -67,7 +67,7 @@ ___
 ## Tools
 - [Online graphing calculator — NumWorks](https://www.numworks.com/simulator/)
 ## Videos
-- 
+- [Idiot's guide to fractals](https://www.youtube.com/watch?v=gfVmtaOUER8)
 ## LaTeX
 - https://wch.github.io/latexsheet/latexsheet-0.png
 - [users.dickinson.edu/\~richesod/latex/latexcheatsheet.pdf](https://users.dickinson.edu/~richesod/latex/latexcheatsheet.pdf)
