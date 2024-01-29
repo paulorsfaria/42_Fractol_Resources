@@ -180,6 +180,12 @@ ___
 - [Online graphing calculator — NumWorks](https://www.numworks.com/simulator/)
 ## Videos
 - 
+## LaTeX
+- https://wch.github.io/latexsheet/latexsheet-0.png
+- [users.dickinson.edu/\~richesod/latex/latexcheatsheet.pdf](https://users.dickinson.edu/~richesod/latex/latexcheatsheet.pdf)
+- [LaTeX/Mathematics - Wikibooks, open books for an open world](https://en.wikibooks.org/wiki/LaTeX/Mathematics)
+- [Markdown and LaTeX introduction](https://ashki23.github.io/markdown-latex.html)
+
 ## Footnotes
 
 [^1]: [The Fractal Geometry of Nature - Benoit B. Mandelbrot - Google Livros](https://books.google.pt/books?id=0R2LkE3N7-oC&redir_esc=y)
