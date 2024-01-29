@@ -49,6 +49,7 @@ ___
 # Refs
 ## Docs
 - [fractalfoundation.org/fractivities/FractalPacks-EducatorsGuide.pdf](https://fractalfoundation.org/fractivities/FractalPacks-EducatorsGuide.pdf)
+- [Lode's Computer Graphics Tutoria : Julia Mandelbrot Set - CgTutor](https://lodev.org/cgtutor/juliamandelbrot.html)
 ## Articles
 - [Fractal - Wikipedia](https://en.wikipedia.org/wiki/Fractal)
 - [History of Fractals](https://nnart.org/history-of-fractals/)
@@ -77,7 +78,7 @@ ___
 ## Footnotes
 
 [^1]: [The Fractal Geometry of Nature - Benoit B. Mandelbrot - Google Livros](https://books.google.pt/books?id=0R2LkE3N7-oC&redir_esc=y)
- [^2]: [Are Fractals or Fractal Curves Differentiable?](https://nnart.org/are-fractals-differentiable/)
+[^2]: [Are Fractals or Fractal Curves Differentiable?](https://nnart.org/are-fractals-differentiable/)
 [^3]: [How to Draw Fractals by Hand: A Beginner's Guide](https://nnart.org/how-to-draw-fractals-by-hand-a-beginners-guide/)
 [^4]: [Complete List of Books by Benoit Mandelbrot](https://nnart.org/complete-list-of-books-by-benoit-mandelbrot/)
 [^5]: [How Are Fractals Used in Technology and Engineering?](https://nnart.org/how-are-fractals-used-in-technology-and-engineering/)
