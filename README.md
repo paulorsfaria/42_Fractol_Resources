@@ -45,6 +45,7 @@ ___
 ___
 ## Refs
 ### Docs
+- [42Docs](https://harm-smits.github.io/42docs/)
 - [Fractals Educators Guide](https://fractalfoundation.org/fractivities/FractalPacks-EducatorsGuide.pdf)
 - [Lode's Computer Graphics Tutorial : Julia Mandelbrot Set](https://lodev.org/cgtutor/juliamandelbrot.html)
 ### Articles
@@ -54,6 +55,7 @@ ___
 - [Understanding Julia and Mandelbrot Sets](https://www.karlsims.com/julia.html)
 - [Tag: Complex Numbers — Acko.net](https://acko.net/tag/complex-numbers/)
 - [Complex Analysis](https://complex-analysis.com/content/mandelbrot_set.html)
+- [Classica Iterated Function Systems](https://larryriddle.agnesscott.org/ifs/ifs.htm)
 #### Real Numbers 
 - [Real Numbers (Definition, Properties and Examples)](https://byjus.com/maths/real-numbers/)
 #### Value of i
@@ -69,6 +71,8 @@ ___
 - [What's so special about the Mandelbrot Set? - Numberphile](https://youtu.be/FFftmWSzgmk?si=QebM2_Ny866hULFQ)
 - [The dark side of the Mandelbrot set - Mathologer](https://youtu.be/9gk_8mQuerg?si=mCjcqvcn6kVsQN8Y)
 - [Beyond the Mandelbrot set, an intro to holomorphic dynamics](https://youtu.be/LqbZpur38nw?si=7gpxDJIpsfJYp_0m)
+- [Draw a Pollock painting with the minilibX](https://www.youtube.com/watch?v=9eAPbNUQD1Y)
+- [Introduction to the minilibX : a simple X-Window programming API in C](https://www.youtube.com/watch?v=bYS93r6U0zg&t=0s)
 ## LaTeX
 - https://wch.github.io/latexsheet/latexsheet-0.png
 - [users.dickinson.edu/\~richesod/latex/latexcheatsheet.pdf](https://users.dickinson.edu/~richesod/latex/latexcheatsheet.pdf)
