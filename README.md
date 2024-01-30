@@ -66,6 +66,9 @@ ___
 - [Online graphing calculator — NumWorks](https://www.numworks.com/simulator/)
 ## Videos
 - [Idiot's guide to fractals](https://www.youtube.com/watch?v=gfVmtaOUER8)
+- [What's so special about the Mandelbrot Set? - Numberphile](https://youtu.be/FFftmWSzgmk?si=QebM2_Ny866hULFQ)
+- [The dark side of the Mandelbrot set - Mathologer](https://youtu.be/9gk_8mQuerg?si=mCjcqvcn6kVsQN8Y)
+- [Beyond the Mandelbrot set, an intro to holomorphic dynamics](https://youtu.be/LqbZpur38nw?si=7gpxDJIpsfJYp_0m)
 ## LaTeX
 - https://wch.github.io/latexsheet/latexsheet-0.png
 - [users.dickinson.edu/\~richesod/latex/latexcheatsheet.pdf](https://users.dickinson.edu/~richesod/latex/latexcheatsheet.pdf)
