@@ -48,6 +48,7 @@ ___
 - [42Docs](https://harm-smits.github.io/42docs/)
 - [Fractals Educators Guide](https://fractalfoundation.org/fractivities/FractalPacks-EducatorsGuide.pdf)
 - [Lode's Computer Graphics Tutorial : Julia Mandelbrot Set](https://lodev.org/cgtutor/juliamandelbrot.html)
+- [Newtown's Fractal](https://young.physics.ucsc.edu/242/newton.pdf)
 ### Articles
 - [Fractal - Wikipedia](https://en.wikipedia.org/wiki/Fractal)
 - [History of Fractals](https://nnart.org/history-of-fractals/)
@@ -72,6 +73,7 @@ ___
 - [Idiot's guide to fractals](https://www.youtube.com/watch?v=gfVmtaOUER8)
 - [What's so special about the Mandelbrot Set? - Numberphile](https://youtu.be/FFftmWSzgmk?si=QebM2_Ny866hULFQ)
 - [The dark side of the Mandelbrot set - Mathologer](https://youtu.be/9gk_8mQuerg?si=mCjcqvcn6kVsQN8Y)
+- [Playlist about everything and anything Mandelbrot and Julia](https://www.youtube.com/watch?v=7MotVcGvFMg&list=PL9tHLTl03LqG4ajDvqyfCDMKSxmR_plJ3)
 - [Beyond the Mandelbrot set, an intro to holomorphic dynamics](https://youtu.be/LqbZpur38nw?si=7gpxDJIpsfJYp_0m)
 - [Draw a Pollock painting with the minilibX](https://www.youtube.com/watch?v=9eAPbNUQD1Y)
 - [Introduction to the minilibX : a simple X-Window programming API in C](https://www.youtube.com/watch?v=bYS93r6U0zg&t=0s)
