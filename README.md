@@ -56,6 +56,7 @@ ___
 - [minilibx : 42-cursus Docs](https://42-cursus.gitbook.io/guide/minilibx)
 - [events-with-the-minilibx](https://aurelienbrabant.fr/blog/events-with-the-minilibx)
 - [minilibx (in Rust)](https://docs.rs/minilibx/latest/minilibx/)
+- [minilibx : ft_libgfx](https://github.com/qst0/ft_libgfx?tab=readme-ov-file)
 ### Articles
 - [Fractal - Wikipedia](https://en.wikipedia.org/wiki/Fractal)
 - [History of Fractals](https://nnart.org/history-of-fractals/)
