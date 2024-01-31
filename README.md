@@ -48,6 +48,13 @@ ___
 - [42Docs](https://harm-smits.github.io/42docs/)
 - [Fractals Educators Guide](https://fractalfoundation.org/fractivities/FractalPacks-EducatorsGuide.pdf)
 - [Lode's Computer Graphics Tutorial : Julia Mandelbrot Set](https://lodev.org/cgtutor/juliamandelbrot.html)
+### MiniLibX
+- [minilibx-linux](https://github.com/42Paris/minilibx-linux)
+- [minilibx : harm-smits Docs](https://harm-smits.github.io/42docs/libs/minilibx/getting_started.html)
+- [minilibx : ilkou Docs](https://github.com/ilkou/minilibx)
+- [minilibx : 42-cursus Docs](https://42-cursus.gitbook.io/guide/minilibx)
+- [events-with-the-minilibx](https://aurelienbrabant.fr/blog/events-with-the-minilibx)
+- [minilibx (in Rust)](https://docs.rs/minilibx/latest/minilibx/)
 ### Articles
 - [Fractal - Wikipedia](https://en.wikipedia.org/wiki/Fractal)
 - [History of Fractals](https://nnart.org/history-of-fractals/)
