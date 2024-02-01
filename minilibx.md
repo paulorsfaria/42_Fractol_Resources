@@ -1,6 +1,19 @@
 # minilibx kickstarter
 
-**minilibX** is a simple X-Window API written in C, designed to introduce students to the **X-Window System**. [^1]
+## Table o'Contents
+<!-- mtoc-start -->
+
+* [X-Window System](#x-window-system)
+* [X client-server Architecture](#x-client-server-architecture)
+* [Implementation](#implementation)
+  * [mlx_init()](#mlx_init)
+  * [t_xvar struct](#t_xvar-struct)
+* [Footnotes](#footnotes)
+
+<!-- mtoc-end -->
+___
+
+**minilibX** is a small library, a simplified version of XLib written in C , designed to introduce students to the **X-Window System**. [^1]
 
 ## X-Window System
 
@@ -43,6 +56,78 @@ The X Server receives requests to output graphics on the display (through window
 >
 > There are many implementations of the X Window System (Xlib), minilibx being just one among many following the X Consortium standard; [^4]
 > - [Xlib : X Consortium Standard](https://www.x.org/releases/current/doc/libX11/libX11/libX11.html)
+___
+
+## Implementation
+
+### mlx_init()
+
+The `mlx_init()` function initializes and returns a pointer to the address of a `t_xvar` structure. This struct is malloced with memory from the heap. 
+```c
+	void	*mlx_init()
+	{
+		t_xvar	*xvar;
+		
+		if (!(xvar = malloc(sizeof(*xvar))))
+			return ((void*)0);
+		if ((xvar->display = XOpenDisplay("")) == 0)
+		{
+			free(xvar);
+			return ((void*)0);
+		}
+		xvar->screen = DefaultScreen(xvar->display);
+		xvar->root = DefaultRootWindow(xvar->display);
+		xvar->cmap = DefaultColormap(xvar->display,xvar->screen);
+		xvar->depth = DefaultDepth(xvar->display,xvar->screen);
+		if (mlx_int_get_visual(xvar)==-1)
+		{
+			printf(ERR_NO_TRUECOLOR);
+			exit(1);
+		}
+		xvar->win_list = 0;
+		xvar->loop_hook = 0;
+		xvar->loop_param = (void *)0;
+		xvar->do_flush = 1;
+		xvar->wm_delete_window = XInternAtom (xvar->display, "WM_DELETE_WINDOW", False);
+		xvar->wm_protocols = XInternAtom (xvar->display, "WM_PROTOCOLS", False);
+		mlx_int_deal_shm(xvar);
+		if (xvar->private_cmap)
+			xvar->cmap = XCreateColormap(xvar->display,xvar->root,
+					 xvar->visual,AllocNone);
+		mlx_int_rgb_conversion(xvar);
+		xvar->end_loop = 0;
+		return (xvar);
+	}
+```
+
+### t_xvar struct
+
+The `t_var` struct contains all the information about the window and the display `minilibx` will need to do its job.
+
+```c
+	typedef struct	s_xvar 
+	{
+		Display		*display;
+		Window		root;
+		int			screen;
+		int			depth;
+		Visual		*visual;
+		Colormap	cmap;
+		int			private_cmap;
+		t_win_list	*win_list;
+		int			(*loop_hook)();
+		void		*loop_param;
+		int			use_xshm;
+		int			pshm_format;
+		int			do_flush;
+		int			decrgb[6];
+		Atom		wm_delete_window;
+		Atom		wm_protocols;
+		int 		end_loop;
+	}				t_xvar;
+```
+
+
 
 ___
 
