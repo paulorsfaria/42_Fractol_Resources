@@ -25,7 +25,7 @@ flowchart TB
 
 	Keys[Keyboard] --->|input| Xserv[X Server]
 	Mouse[Mouse] --->|input| Xserv
-		Display[Display] <---|out| Xserv
+		Display[Display] <---|output| Xserv
 	subgraph W[User Workstation]
 		Xserv[X Server]
 		Xserv --> X-client[X client1]
