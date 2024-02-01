@@ -14,7 +14,24 @@ It enables users to draw and move windows on a display using the mouse and keybo
 
 ## X client-server Architecture
 
+```mermaid
+flowchart TB
+	Keys[Keyboard]
+	Mouse[Mouse]
 
+	Keys[Keyboard] --> Xserv[X Server]
+	Mouse[Mouse] --> Xserv
+	Xserv --> Display
+	subgraph W[User Workstation]
+		Xserv[X Server]
+		Xserv --> X-client[X client1]
+		Xserv --> X-client2[X client2]
+	end
+	subgraph Remote Machine
+		Xserv --> X-client3[X client3]
+		X-client3
+	end
+```
 
 
 
