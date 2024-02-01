@@ -10,6 +10,9 @@
   * [t_xvar struct](#t_xvar-struct)
   * [mlx_new_window()](#mlx_new_window)
   * [t_win_list struct](#t_win_list-struct)
+* [Events](#events)
+* [Hooks](#hooks)
+  * [mlx_hook()](#mlx_hook)
 * [Footnotes](#footnotes)
 
 <!-- mtoc-end -->
@@ -196,6 +199,33 @@ typedef struct	s_win_list
 	t_event_list		hooks[MLX_MAX_EVENT];
 }				t_win_list;
 ```
+___
+
+## Events
+
+...
+
+## Hooks
+
+### mlx_hook()
+
+The `mlx_hook()` function is a hook registration function.
+```c
+int	mlx_hook(t_win_list *win, int x_event, int x_mask, 
+		 int (*funct)(),void *param)
+{
+  win->hooks[x_event].hook = funct;
+  win->hooks[x_event].param = param;
+  win->hooks[x_event].mask = x_mask;
+}
+
+```
+> [!Note]
+>
+> `minilibx` has some convenient alias of `mlx_hook()` to hook to specific events:
+> - `mlx_expose_hook()` for expose events
+> - `mlx_key_hook()` for key up events
+> - `mlx_mouse_hook()` for mouse down events
 
 ___
 
