@@ -33,6 +33,9 @@ It enables users to draw and move windows on a display using the mouse and keybo
 
 ## X client-server Architecture
 
+X is based on a client-server model: 
+
+> one **X server** connects to multiple **X client** programs.
 ```mermaid
 flowchart TB
 	Display[Display]
@@ -51,10 +54,6 @@ flowchart TB
 		Xserv -->|Network Conn| X-client3[X client3]
 	end
 ```
-
-X is based on a client-server model: 
-
-> one **X server** connects to multiple **X client** programs.
 
 The X Server receives requests to output graphics on the display (through windows) and sends back user input (from a keyboard, mouse, etc).
 
