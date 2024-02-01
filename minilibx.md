@@ -15,9 +15,6 @@ It enables users to draw and move windows on a display using the mouse and keybo
 ## X client-server Architecture
 
 ```mermaid
----
-title: X Server Architecture
----
 flowchart TB
 	Display[Display]
 	Keys[Keyboard]
