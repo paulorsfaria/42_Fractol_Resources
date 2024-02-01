@@ -25,7 +25,7 @@ flowchart TB
 
 	Keys[Keyboard] --->|input| Xserv[X Server]
 	Mouse[Mouse] --->|input| Xserv
-		Display[Display] <---|output| Xserv
+	Display[Display] <---|output| Xserv
 	subgraph W[User Workstation]
 		Xserv[X Server]
 		Xserv --> X-client[X client1]
@@ -42,6 +42,10 @@ X is based on a client-server model:
 
 The X Server receives requests to output graphics on the display (through windows) and sends back user input (from a keyboard, mouse, etc).
 
+> [!Note]
+>
+> There are many implementations of the X Window System (Xlib):
+> - [Xlib : X Consortium Standard](https://www.x.org/releases/current/doc/libX11/libX11/libX11.html)
 
 ___
 
