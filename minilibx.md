@@ -33,6 +33,11 @@ flowchart TB
 	end
 ```
 
+X is based on a client-server model: 
+
+> one **X server** connects to multiple **X client** programs.
+
+The X Server receives requests to output graphics on the display (through windows) and sends back user input (keyboard, mouse, etc).
 
 
 ___
