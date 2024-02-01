@@ -9,6 +9,20 @@
 >
 > $i = \sqrt{-1}$
 
+## Complex Numbers
+
+### Deriving the Formula for Squaring a Complex Number
+
+> $(x + yi)^2 =$ 
+>
+> $= (x + yi) * (x + yi)$
+>
+> $= x^2 + xyi + xyi + y^2i^2$
+>
+> $= x^2 + 2xyi - y^2$ 
+>
+> $= x^2 - y^2 + 2xyi$
+
 ___
 ## Fractal Sets
 
