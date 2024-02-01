@@ -11,6 +11,7 @@
   * [mlx_new_window()](#mlx_new_window)
   * [t_win_list struct](#t_win_list-struct)
 * [Events](#events)
+  * [X11 Keysyms](#x11-keysyms)
 * [Hooks](#hooks)
   * [mlx_hook()](#mlx_hook)
 * [Footnotes](#footnotes)
@@ -203,7 +204,14 @@ ___
 
 ## Events
 
-...
+### X11 Keysyms
+
+`X11` `keysyms` are portable representations of the symbols on the caps of keys. They are used to process keyboard events in a consistent manner across different systems and hardware configurations.
+
+`Keysyms` are defined in two standard include files: `<X11/keysym.h>`x and `<X11/keysymdef.h>`. These files contain several families of `keysyms` such as `LATIN1`, `LATIN2`, `LATIN3`, `LATIN4`, `KATAKANA`, `ARABIC`, `CYRILLIC`, `GREEK`, `TECHNICAL`, `SPECIAL`, `PUBLISHING`, `APL`, `HEBREW`, and `MISCELLANY`.
+
+Each `keysym` is a four-byte value. In the standard `keysyms`, the least significant 8 bits indicate a particular `character` within a set, and the next 8 bits indicate a particular `keysym set`. **The order of the sets is important** since not all the sets are complete. Some keysyms do not have obvious counterparts on the keyboard, but may be generated with certain key combinations [^5]
+
 
 ## Hooks
 
@@ -235,3 +243,4 @@ ___
 [^2]: [X-Window System : Wikipedia](https://en.wikipedia.org/wiki/X-Window_System)
 [^3]: [Bitmap : Wikipedia](https://en.wikipedia.org/wiki/Bitmap)
 [^4]: [Xlib : Wikipedia](https://en.wikipedia.org/wiki/Xlib)
+[^5]: [Xlib Keysyms : Oreilly.com](https://www.oreilly.com/library/view/xlib-reference-manual/9780937175262/16_appendix-h.html)
