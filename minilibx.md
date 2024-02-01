@@ -8,6 +8,8 @@
 * [Implementation](#implementation)
   * [mlx_init()](#mlx_init)
   * [t_xvar struct](#t_xvar-struct)
+  * [mlx_new_window()](#mlx_new_window)
+  * [t_win_list struct](#t_win_list-struct)
 * [Footnotes](#footnotes)
 
 <!-- mtoc-end -->
@@ -64,40 +66,40 @@ ___
 
 The `mlx_init()` function initializes and returns a pointer to the address of a `t_xvar` structure. This struct is malloced with memory from the heap. 
 ```c
-	void	*mlx_init()
+void	*mlx_init()
+{
+	t_xvar	*xvar;
+	
+	if (!(xvar = malloc(sizeof(*xvar))))
+		return ((void*)0);
+	if ((xvar->display = XOpenDisplay("")) == 0)
 	{
-		t_xvar	*xvar;
-		
-		if (!(xvar = malloc(sizeof(*xvar))))
-			return ((void*)0);
-		if ((xvar->display = XOpenDisplay("")) == 0)
-		{
-			free(xvar);
-			return ((void*)0);
-		}
-		xvar->screen = DefaultScreen(xvar->display);
-		xvar->root = DefaultRootWindow(xvar->display);
-		xvar->cmap = DefaultColormap(xvar->display,xvar->screen);
-		xvar->depth = DefaultDepth(xvar->display,xvar->screen);
-		if (mlx_int_get_visual(xvar)==-1)
-		{
-			printf(ERR_NO_TRUECOLOR);
-			exit(1);
-		}
-		xvar->win_list = 0;
-		xvar->loop_hook = 0;
-		xvar->loop_param = (void *)0;
-		xvar->do_flush = 1;
-		xvar->wm_delete_window = XInternAtom (xvar->display, "WM_DELETE_WINDOW", False);
-		xvar->wm_protocols = XInternAtom (xvar->display, "WM_PROTOCOLS", False);
-		mlx_int_deal_shm(xvar);
-		if (xvar->private_cmap)
-			xvar->cmap = XCreateColormap(xvar->display,xvar->root,
-					 xvar->visual,AllocNone);
-		mlx_int_rgb_conversion(xvar);
-		xvar->end_loop = 0;
-		return (xvar);
+		free(xvar);
+		return ((void*)0);
 	}
+	xvar->screen = DefaultScreen(xvar->display);
+	xvar->root = DefaultRootWindow(xvar->display);
+	xvar->cmap = DefaultColormap(xvar->display,xvar->screen);
+	xvar->depth = DefaultDepth(xvar->display,xvar->screen);
+	if (mlx_int_get_visual(xvar)==-1)
+	{
+		printf(ERR_NO_TRUECOLOR);
+		exit(1);
+	}
+	xvar->win_list = 0;
+	xvar->loop_hook = 0;
+	xvar->loop_param = (void *)0;
+	xvar->do_flush = 1;
+	xvar->wm_delete_window = XInternAtom (xvar->display, "WM_DELETE_WINDOW", False);
+	xvar->wm_protocols = XInternAtom (xvar->display, "WM_PROTOCOLS", False);
+	mlx_int_deal_shm(xvar);
+	if (xvar->private_cmap)
+		xvar->cmap = XCreateColormap(xvar->display,xvar->root,
+				 xvar->visual,AllocNone);
+	mlx_int_rgb_conversion(xvar);
+	xvar->end_loop = 0;
+	return (xvar);
+}
 ```
 
 ### t_xvar struct
@@ -105,29 +107,95 @@ The `mlx_init()` function initializes and returns a pointer to the address of a 
 The `t_var` struct contains all the information about the window and the display `minilibx` will need to do its job.
 
 ```c
-	typedef struct	s_xvar 
-	{
-		Display		*display;
-		Window		root;
-		int			screen;
-		int			depth;
-		Visual		*visual;
-		Colormap	cmap;
-		int			private_cmap;
-		t_win_list	*win_list;
-		int			(*loop_hook)();
-		void		*loop_param;
-		int			use_xshm;
-		int			pshm_format;
-		int			do_flush;
-		int			decrgb[6];
-		Atom		wm_delete_window;
-		Atom		wm_protocols;
-		int 		end_loop;
-	}				t_xvar;
+typedef struct	s_xvar 
+{
+	Display		*display;
+	Window		root;
+	int			screen;
+	int			depth;
+	Visual		*visual;
+	Colormap	cmap;
+	int			private_cmap;
+	t_win_list	*win_list;
+	int			(*loop_hook)();
+	void		*loop_param;
+	int			use_xshm;
+	int			pshm_format;
+	int			do_flush;
+	int			decrgb[6];
+	Atom		wm_delete_window;
+	Atom		wm_protocols;
+	int 		end_loop;
+}				t_xvar;
 ```
+___
 
+### mlx_new_window()
 
+The `mlx_new_window()` function returns a pointer to the address of a new `t_win_list` struct.
+```c
+void	*mlx_new_window(t_xvar *xvar,int size_x,int size_y,char *title)
+{
+	t_win_list				*new_win;
+	XSetWindowAttributes	xswa;
+	XGCValues				xgcv;
+
+	xswa.background_pixel = 0;
+	xswa.border_pixel = -1;
+	xswa.colormap = xvar->cmap;
+	/*
+	xswa.event_mask = ButtonPressMask | ButtonReleaseMask | ExposureMask |
+		KeyPressMask | KeyReleaseMask | StructureNotifyMask;
+	*/
+	/* xswa.event_mask = ExposureMask; */
+	xswa.event_mask = 0xFFFFFF;	/* all events */
+	if (!(new_win = malloc(sizeof(*new_win))))
+		return ((void *)0);
+	new_win->window = XCreateWindow(xvar->display,xvar->root,0,0,size_x,size_y,
+					0,CopyFromParent,InputOutput,xvar->visual,
+					CWEventMask|CWBackPixel|CWBorderPixel|
+					CWColormap,&xswa);
+	mlx_int_anti_resize_win(xvar,new_win->window,size_x,size_y);
+	XStoreName(xvar->display,new_win->window,title);
+	XSetWMProtocols(xvar->display, new_win->window, &(xvar->wm_delete_window), 1);
+	xgcv.foreground = -1;
+	xgcv.function = GXcopy;
+	xgcv.plane_mask = AllPlanes;
+	new_win->gc = XCreateGC(xvar->display,new_win->window,
+				GCFunction|GCPlaneMask|GCForeground,&xgcv);
+	new_win->next = xvar->win_list;
+	xvar->win_list = new_win;
+	/*
+	new_win->mouse_hook = mlx_int_do_nothing;
+	new_win->key_hook = mlx_int_do_nothing;
+	new_win->expose_hook = mlx_int_do_nothing;
+	*/
+	bzero(&(new_win->hooks), sizeof(new_win->hooks));
+	XMapRaised(xvar->display,new_win->window);
+	mlx_int_wait_first_expose(xvar,new_win->window);
+	return (new_win);
+}
+```
+___
+
+### t_win_list struct
+
+The `t_win_list` struct contains all the information about the window and the display.
+```c
+typedef struct	s_win_list
+{
+	Window				window;
+	GC					gc;
+	struct s_win_list	*next;
+	int					(*mouse_hook)();
+	int					(*key_hook)();
+	int					(*expose_hook)();
+	void				*mouse_param;
+	void				*key_param;
+	void				*expose_param;
+	t_event_list		hooks[MLX_MAX_EVENT];
+}				t_win_list;
+```
 
 ___
 
