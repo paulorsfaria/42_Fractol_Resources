@@ -16,7 +16,7 @@ It enables users to draw and move windows on a display using the mouse and keybo
 
 ```mermaid
 ---
-title: User Workstation
+title: X Server Architecture
 ---
 flowchart TB
 	Display[Display]
