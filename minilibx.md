@@ -210,8 +210,20 @@ ___
 
 `Keysyms` are defined in two standard include files: `<X11/keysym.h>`x and `<X11/keysymdef.h>`. These files contain several families of `keysyms` such as `LATIN1`, `LATIN2`, `LATIN3`, `LATIN4`, `KATAKANA`, `ARABIC`, `CYRILLIC`, `GREEK`, `TECHNICAL`, `SPECIAL`, `PUBLISHING`, `APL`, `HEBREW`, and `MISCELLANY`.
 
-Each `keysym` is a four-byte value. In the standard `keysyms`, the least significant 8 bits indicate a particular `character` within a set, and the next 8 bits indicate a particular `keysym set`. **The order of the sets is important** since not all the sets are complete. Some keysyms do not have obvious counterparts on the keyboard, but may be generated with certain key combinations [^5]
+Each `keysym` is a four-byte value. In the standard `keysyms`, the least significant 8 bits indicate a particular `character` within a set, and the next 8 bits indicate a particular `keysym set`. **The order of the sets is important** since not all the sets are complete. Some `keysyms` do not have obvious counterparts on the keyboard, but may be generated with certain key combinations [^5]
 
+> [!Important]
+>
+> **Keysym VS Keycode**
+>
+> `keycodes` and `keysyms` in `X11` are both used to identify keys on a keyboard, but they serve different purposes and are used in different ways.
+>
+> **TLDR**: A keycode identifies a key, while a keysym identifies the symbol produced by pressing a key.
+>
+> - A `keycode` is a hardware-specific `character` code. it is determined by the X server implementation and the physical keyboard layout. Because of this, generally an X app cannot use `keycodes` directly because the assignment of `keycodes` to keys can vary between different systems and keyboard configurations. However, `keycodes` provide a way to handle keyboard input at a low level
+>
+> - A `keysym` is a portable representation of the keyboard inputs. It provides a consistent way to process keyboard events across different systems and hardware configurations. `Keysyms` are defined in terms of the symbols they represent, such as 'space', 'escape', 'x', '2', etc. Unlike `keycodes`, `keysyms` are not tied to the physical location of keys on the keyboard.
+>
 
 ## Hooks
 
