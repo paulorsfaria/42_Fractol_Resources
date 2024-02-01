@@ -207,7 +207,7 @@ ___
 
 `X11` `keysyms` are portable representations of the symbols on the caps of keys. They are used to process keyboard events in a consistent manner across different systems and hardware configurations.
 
-`Keysyms` are defined in two standard include files: `<X11/keysym.h>`x and `<X11/keysymdef.h>`. These files contain several families of `keysyms` such as `LATIN1`, `LATIN2`, `LATIN3`, `LATIN4`, `KATAKANA`, `ARABIC`, `CYRILLIC`, `GREEK`, `TECHNICAL`, `SPECIAL`, `PUBLISHING`, `APL`, `HEBREW`, and `MISCELLANY`.
+`Keysyms` are defined in two standard include files: `<X11/keysym.h>` and `<X11/keysymdef.h>`. These files contain several families of `keysyms` such as `LATIN1`, `LATIN2`, `LATIN3`, `LATIN4`, `KATAKANA`, `ARABIC`, `CYRILLIC`, `GREEK`, `TECHNICAL`, `SPECIAL`, `PUBLISHING`, `APL`, `HEBREW`, and `MISCELLANY`.
 
 Each `keysym` is a four-byte value. In the standard `keysyms`, the least significant 8 bits indicate a particular `character` within a set, and the next 8 bits indicate a particular `keysym set`. **The order of the sets is important** since not all the sets are complete. Some `keysyms` do not have obvious counterparts on the keyboard, but may be generated with certain key combinations [^5]
 
@@ -229,6 +229,9 @@ Each `keysym` is a four-byte value. In the standard `keysyms`, the least signifi
 ### mlx_hook()
 
 The `mlx_hook()` function is a hook registration function.
+
+The input event is filtered by an event mask (`x_mask` filtering by type) and by event name (`x_event`), then the appropriate hook (handler function) is registered.
+
 ```c
 int	mlx_hook(t_win_list *win, int x_event, int x_mask, 
 		 int (*funct)(),void *param)
