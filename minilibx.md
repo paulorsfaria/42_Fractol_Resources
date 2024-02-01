@@ -41,7 +41,7 @@ The X Server receives requests to output graphics on the display (through window
 
 > [!Note]
 >
-> There are many implementations of the X Window System (Xlib):
+> There are many implementations of the X Window System (Xlib), minilibx being just one among many following the X Consortium standard;
 > - [Xlib : X Consortium Standard](https://www.x.org/releases/current/doc/libX11/libX11/libX11.html)
 
 ___
