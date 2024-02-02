@@ -92,6 +92,8 @@ ___
 #### Value of i
 - [Value of i in Complex Numbers - Powers of i Chart](https://byjus.com/maths/value-of-i/)
 - [Value of I - Commonly Used Values of i](https://www.vedantu.com/maths/value-of-i)
+### Math Utils
+- [How to scale down a range of numbers with a known min and max value](https://stackoverflow.com/questions/5294955/how-to-scale-down-a-range-of-numbers-with-a-known-min-and-max-value)
 ## Repos
 - [fract-ol: graphically beautiful fractals | Medium](https://medium.com/@leogaudin/fract-ol-creating-graphically-beautiful-fractals-6664b6b045b5)
 - [fract-ol — render beautiful sets. | by Braulio Santos | Jan, 2024 | Medium](https://medium.com/@by1jorgesantos/fract-ol-render-beautiful-sets-0699a378b953)
