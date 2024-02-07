@@ -1,6 +1,33 @@
 # 42_Fractol_Resources
 > Computer Graphics Fractals
 
+<!-- mtoc-start -->
+
+* [Imaginary Numbers](#imaginary-numbers)
+* [Complex Numbers](#complex-numbers)
+  * [Deriving the Formula for Squaring a Complex Number](#deriving-the-formula-for-squaring-a-complex-number)
+* [Fractal Sets](#fractal-sets)
+  * [The Mandelbrot Set](#the-mandelbrot-set)
+    * [Generating the Mandelbrot Set](#generating-the-mandelbrot-set)
+* [Fractal Generation Techniques](#fractal-generation-techniques)
+  * [Escape-Time Fractals](#escape-time-fractals)
+  * [Iterated Function Systems](#iterated-function-systems)
+  * [Random Fractals](#random-fractals)
+  * [Orbit Trap Method](#orbit-trap-method)
+* [Refs](#refs)
+  * [Docs](#docs)
+  * [MiniLibX](#minilibx)
+  * [Articles](#articles)
+    * [Real Numbers ](#real-numbers-)
+    * [Value of i](#value-of-i)
+  * [Math Utils](#math-utils)
+* [Repos](#repos)
+* [Tools](#tools)
+* [Videos](#videos)
+* [LaTeX](#latex)
+* [Footnotes](#footnotes)
+
+<!-- mtoc-end -->
 ## Imaginary Numbers
 
 > $i^2 = -1$
