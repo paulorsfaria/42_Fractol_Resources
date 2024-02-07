@@ -99,6 +99,7 @@ ___
 - [fract-ol — render beautiful sets. | by Braulio Santos | Jan, 2024 | Medium](https://medium.com/@by1jorgesantos/fract-ol-render-beautiful-sets-0699a378b953)
 - [GitHub - agavrel/42-fractol: Infographic \~ Fractal](https://github.com/agavrel/42-fractol)
 - [GitHub - Alexdelia/42-fract-ol: 42 project around 2D fractal in minilibx](https://github.com/Alexdelia/42-fract-ol)
+- [GitHub - aamaral-42/42_fract-ol: 42 project](https://github.com/aamaral-42/42_fract-ol)
 ## Tools
 - [Online graphing calculator — NumWorks](https://www.numworks.com/simulator/)
 ## Videos
