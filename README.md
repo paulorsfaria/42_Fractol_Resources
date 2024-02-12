@@ -111,7 +111,7 @@ ___
 - [events-with-the-minilibx](https://aurelienbrabant.fr/blog/events-with-the-minilibx)
 - [minilibx (in Rust)](https://docs.rs/minilibx/latest/minilibx/)
 - [minilibx : ft_libgfx](https://github.com/qst0/ft_libgfx?tab=readme-ov-file)
-- [minilibx : Gontjarow](https://github.com/Gontjarow/MiniLibX)
+- [minilibx : Gontjarow](https://gontjarow.github.io/MiniLibX/)
 ### Articles
 - [Fractal - Wikipedia](https://en.wikipedia.org/wiki/Fractal)
 - [History of Fractals](https://nnart.org/history-of-fractals/)
