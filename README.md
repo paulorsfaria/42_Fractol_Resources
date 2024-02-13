@@ -176,7 +176,7 @@ The algorithm starts with a random guess, let's call it $X_0$.
 
 Most likely the initial output of our polynomial at $X_0$ will not be 0, so we haven't found the solution.
 
-Guess : $X_0 = 1.3$.
+> Guess : $x_0 = 1.3$
 
 This return value is some other value that represents the **height** of the curve at $X_0$.
 
@@ -198,7 +198,7 @@ One way to think about this, is to consider the fact that the slope of the tange
 
 > **Slope / Tangent**
 >
-> $Slope = \dfrac{P(X_0)}{-Step}$
+> $Slope = \dfrac{P(x_0)}{-Step}$
 
 On the other hand the slope of this tangent line is the derivative of the polynomial at that point.
 
@@ -214,13 +214,19 @@ On the other hand the slope of this tangent line is the derivative of the polyno
 > >
 > > $P'(x) = 5x^4 + 2x - 1$
 
-So if we rearrange this equation $P'(X_0) =\dfrac{P(X_0)}{-Step}$, we get a simple expression that gives us the ability to compute this step size:
+So if we rearrange this equation $P'(x_0) =\dfrac{P(x_0)}{-Step}$, we get a simple expression that gives us the ability to compute this step size:
 
+> **Step Size Formula**
+>
 > $Step = \dfrac{P(x_0)}{P'(x_0)}$
 
+So the next guess will be $X_1$ adjusted by the step size:
 
+$X_1 = X_0 - \dfrac{P(x_0)}{P'(x_0)}$
 
+After that we can repeat the process. We compute the value of this function and the slope at this new guess, which gives us a new linear approximation. Then make the next guess $x_2$, wherever that tangent line crosses the x-axis. Repeat this enough times and before
 
+> Guess : $x_2 = 1.054$
 
 
 
