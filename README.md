@@ -155,9 +155,15 @@ There is also a Cubic Polynomial Formula that can be applied to Cubic Functions:
 Now, you might be wondering about higher order polynomial formulas. 
 
 - A Quartic formula exists but no one really uses it in practice due to its complexity.
-- After that, there is no analogous formula to solve Quintic or higher order polynomials.
+- After that, there is no analogous formula to solve Quintic or higher order polynomials. This is know as the **Unsolvability of the Quintic**.
 
 In other words, it is possible to prove that for an extensive set of standard functions (that use $+$, $-$, $*$, $/$, and $\sqrt[n]{ }$, $sin$, $cos$, $exp$, $log$, etc), there is no way to combine them together that allows us to plug in the coefficients of quintic polynomial and always get out a root.
+
+This unsolvability issue in a way doesn't matter because we have other ways to approximate a solution to this kind of equation with whatever level of precision necessary.
+
+A common way to achieve this is by applying **Newton's Method**.
+
+
 ___
 ## Fractal Generation Techniques
 ### Escape-Time Fractals
