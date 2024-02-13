@@ -115,7 +115,7 @@ This is a very common question in engineering and computer graphics.
 
 For instance in compute graphics, the text on the screen is usually not defined using pixel values, instead they are defined as a bunch of polynomial curves know as `bezier curves`.
 
-> ![Note]
+> [!Note]
 >
 > [Bezier Curves](https://en.wikipedia.org/wiki/B%C3%A9zier_curve)
 
