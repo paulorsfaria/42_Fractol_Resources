@@ -206,7 +206,7 @@ On the other hand the slope of this tangent line is the derivative of the polyno
 
 > **Derivative**
 >
-> $P'(0_0) =\dfrac{P(x_0)}{-Step}$
+> $P'(x_0) =\dfrac{P(x_0)}{-Step}$
 >
 > > Taking our previous polynomial example:
 > >
