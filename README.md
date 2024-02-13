@@ -255,8 +255,37 @@ This was a method used by Newton to solve polynomial expressions. He made it loo
 ___
 ### Finding Roots in the Complex Plane
 
+Even if a polynomial has only a single real number root, we can always factor it into five terms if we allow the roots to be complex numbers:
 
+> $P(x) = x^5 + x^2 - x - 0.2 = 0$
+>
+> $P(x) = (x - r_0)(x - r_1)(x - r_2)(x - r_3)(x - r_4)$
+>
+> Where $r_n = a_n + b_ni$
 
+> This is the **Fundamental Theorem of Algebra**, proved by Carl Friedrich Gauss in 1799. It states that every polynomial equation of degree n with complex number coefficients has n roots, or solutions, in the complex numbers.
+> - [Fundamental Theorem of Algebra - Britannica](https://www.britannica.com/science/fundamental-theorem-of-algebra)
+
+In the context of functions with real number inputs and outputs, where one can picture the association between inputs and outputs as a graph, Newton's method has straightforward visual meaning with tangent lines intersecting the x-axis.
+
+But if we want to allow these inputs to be complex numbers, in turn making the output a complex number, we can't think about tangent lines and graphs anymore.
+
+Good news is, the formula doesn't care how you visualize it. You can plug Newton's equations with complex numbers, starting with a random guess, then evaluating the polynomial at this point as well as its derivative, then using this update rule to generate a new guess.
+
+> $P(z) = z^5 + z^2 - z - 0.2 = 0$
+>
+> Arbitrary Seed: $z_0 = 0.5 + 0.5i$
+>
+> $z_1 = z_0 - \dfrac{P(z_0)}{P'(z_0)}$
+>
+> $z_2 = z_1 - \dfrac{P(z_1)}{P'(z_1)}$
+
+> [!Note]
+>
+> Even though it is not possible to easily visualize this process, it really is the same logic. We are figuring out where a linear approximation of the function around our guess would equal zero, and then we use that zero of the linear approximation as our next guess.  
+
+___
+###
 
 
 ___
