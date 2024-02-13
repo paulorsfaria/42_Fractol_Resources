@@ -130,6 +130,9 @@ If the problem at hand involves a quadratic function, then we can use the quadra
 >
 > $r_1,r_2 = \dfrac{-b ± \sqrt{b^2 - 4ac}}{2a}$
 
+> [!Note]
+>
+> This formula is ubiquitously used to calculate light effects and general 3D manipulation during the production of games and animation movies.
 
 
 
