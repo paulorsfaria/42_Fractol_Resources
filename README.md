@@ -18,6 +18,7 @@
   * [Many Seed, Many Guesses](#many-seed-many-guesses)
   * [Curiosities of the Complex Plane](#curiosities-of-the-complex-plane)
   * [But what the Chaos is going on here!?](#but-what-the-chaos-is-going-on-here)
+  * [The Boundary is the Key](#the-boundary-is-the-key)
 * [Fractal Generation Techniques](#fractal-generation-techniques)
   * [Escape-Time Fractals](#escape-time-fractals)
   * [Iterated Function Systems](#iterated-function-systems)
@@ -315,17 +316,44 @@ A reasonable initial guess might have been that each seed value simply tends tow
 
 Maybe you are wondering if the **Unsolvability of the Quintic** mentioned earlier has anything to do with this weirdness, but it doesn't, they are unrelated ideas.  
 
-The degree-5 polynomial given earlier as an example may be slightly misleading. 
+The degree-5 polynomial given earlier as an example may have been slightly misleading. 
 
 If we spin up the process with a cubic polynomial like $P(z) = z^3 - 1$, we get three roots somewhere in the complex plane. The outcome of this is a three-fold fractal pattern with infinite detail.
 
 However quadratic polynomials are different, in that case each seed value simply tends towards whichever root it's closest to as expected. All the points at an equal distance to the roots are "unable to decide" which root to go and get stuck in a line of points. The output is a split two color screen.
 
-So something new does happen when we go from quadratic to cubic polynomials. The question is what exactly changes?
+So, something new does happen when we go from quadratic to cubic polynomials. The question is what exactly changes?
 
 There is a reasonable explanation as to why these images have to look as complicated as they do. 
 
+___
+### The Boundary is the Key
 
+The key to answering this question is to look at the boundary between regions.
+
+When I mention the word "boundary" you have an intuitive sense of what it means, but mathematicians have a clever way to formalize it that makes it easier to reason when exploring wilder sets like the fractal we are discussing.
+
+> We say that a point is on the boundary of a set if when you draw a small circle centered at that point, no matter how small, it will always contain points that are both inside that set and outside of it.
+
+If we select a point on the interior of the boundary, a small enough circle would eventually only contain points inside the set, and for a point on the exterior, a small enough circle would contain no points from the set.
+
+But when the point is on the boundary, the circle will contain both points inside and outside of the set.
+
+> One way to formulate this is to say, you draw a circle, no matter how small that circle, it either contains all of the colors (when the shared boundary is inside the circle), or it contains just one color (when the circle is in the interior of a region).
+
+What this implies is that you shouldn't be able to find a circle that just contains two of the colors, since that would require you to have points on the boundary between two regions, but not all of them.
+
+This property tells us that, if we are near a sensitive point where some of the seed values go to one root but other seed values go to another, then every root must be accessible by the points in the vicinity of that sensitive point. For any circle you draw, all the points will either tend to one root, or they will tend to all of the roots, they will just tend to a subset of the roots.
+
+But why would this property be true? Where does it come from?
+
+It comes from a field of math called Holomorphic Dynamics
+
+
+____
+
+
+> It's funny that we call this fractal Newton's fractal even though Newton never knew about it's existence.
 
 ___
 ## Fractal Generation Techniques
