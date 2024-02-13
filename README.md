@@ -147,8 +147,9 @@ There is also a Cubic Polynomial Formula that can be applied to Cubic Functions:
 >
 > **Cubic Polynomial Formula**
 >
-> $\sqrt[3]{-\dfrac{q}{2} + \sqrt{\dfrac{q^2}{4} + \dfrac{p^3}{27}}} + \sqrt[3]{-\dfrac{q}{2} - \sqrt{\dfrac{q^2}{4} + \dfrac{p^3}{27}}}$
-
+> $root = \sqrt[3]{-\dfrac{q}{2} + \sqrt{\dfrac{q^2}{4} + \dfrac{p^3}{27}}} + \sqrt[3]{-\dfrac{q}{2} - \sqrt{\dfrac{q^2}{4} + \dfrac{p^3}{27}}}$
+>
+> **Learn More**
 
 ___
 ## Fractal Generation Techniques
@@ -165,6 +166,7 @@ ___
 - [Lode's Computer Graphics Tutorial : Julia Mandelbrot Set](https://lodev.org/cgtutor/juliamandelbrot.html)
 - [Newtown's Fractal](https://young.physics.ucsc.edu/242/newton.pdf)
 - [Newton-Raphson Equations Solutions](https://www.sciencedirect.com/topics/mathematics/newton-raphson-method#:~:text=The%20Newton%2DRaphson%20method%20begins,0%20crosses%20the%20x%2Daxis.)
+- [500 years of NOT teaching THE CUBIC FORMULA. What is it they think you can't handle?](https://www.youtube.com/watch?v=N-KXStupwsc)
 ### MiniLibX
 - [minilibx-linux](https://github.com/42Paris/minilibx-linux)
 - [minilibx : harm-smits Docs](https://harm-smits.github.io/42docs/libs/minilibx/getting_started.html)
