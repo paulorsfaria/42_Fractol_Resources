@@ -15,6 +15,9 @@
   * [Differences & Improved Guesses (Step Size)](#differences--improved-guesses-step-size)
   * [The Newton-Raphson Method](#the-newton-raphson-method)
   * [Finding Roots in the Complex Plane](#finding-roots-in-the-complex-plane)
+  * [Many Seed, Many Guesses](#many-seed-many-guesses)
+  * [Curiosities of the Complex Plane](#curiosities-of-the-complex-plane)
+  * [But what the Chaos is going on here!?](#but-what-the-chaos-is-going-on-here)
 * [Fractal Generation Techniques](#fractal-generation-techniques)
   * [Escape-Time Fractals](#escape-time-fractals)
   * [Iterated Function Systems](#iterated-function-systems)
@@ -285,7 +288,43 @@ Good news is, the formula doesn't care how you visualize it. You can plug Newton
 > Even though it is not possible to easily visualize this process, it really is the same logic. We are figuring out where a linear approximation of the function around our guess would equal zero, and then we use that zero of the linear approximation as our next guess.  
 
 ___
-###
+### Many Seed, Many Guesses
+
+We can apply this idea to many different possible initial guesses simultaneously. With each iteration each dot takes some step based on **Newton's Method**.
+
+Most of the dots will quickly converge to one of the five roots, but there will be some dots which will start bouncing around. This is the same behavior we saw as when we got stuck bouncing around the local minimum of a function when applying the method to the same polynomial using real numbers.
+
+If we did this for every single dot on the plane and then color each dot based on which of those five roots it ended up closest to, the result would be an intricate colorful fractal.
+
+___
+### Curiosities of the Complex Plane
+
+There are regions in the complex plane where if you ever so slightly adjust that seed value, it can completely change which of the five true roots a given dot ends up landing on. We saw some for shadowing of this kind of chaos when discussing intuitions related to the real graph and certain the problematic sequences of guesses. But visualizing this on the comp+lx planes trully shines a light on how unpredictable this business of root finding really can be, and how there is an infinity of initial values where this sort of unpredictability can arise.
+
+Chaos happens at the boundaries between regions.
+
+___
+### But what the Chaos is going on here!?
+
+Yeah, what is it? All we are doing here is solving linear approximations, why would that produce something so endlessly complex?
+
+A reasonable initial guess might have been that each seed value simply tends towards whichever root it's closes to, but if tit was the case, the final image would look like a Voronoi diagrams with straight line boundaries.
+
+> Learn More:
+> - [Voronoi Diagram](https://en.wikipedia.org/wiki/Voronoi_diagram)
+
+Maybe you are wondering if the **Unsolvability of the Quintic** mentioned earlier has anything to do with this weirdness, but it doesn't, they are unrelated ideas.  
+
+The degree-5 polynomial given earlier as an example may be slightly misleading. 
+
+If we spin up the process with a cubic polynomial like $P(z) = z^3 - 1$, we get three roots somewhere in the complex plane. The outcome of this is a three-fold fractal pattern with infinite detail.
+
+However quadratic polynomials are different, in that case each seed value simply tends towards whichever root it's closest to as expected. All the points at an equal distance to the roots are "unable to decide" which root to go and get stuck in a line of points. The output is a split two color screen.
+
+So something new does happen when we go from quadratic to cubic polynomials. The question is what exactly changes?
+
+There is a reasonable explanation as to why these images have to look as complicated as they do. 
+
 
 
 ___
