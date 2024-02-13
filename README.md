@@ -126,7 +126,7 @@ If the problem at hand involves a quadratic function, then we can use the quadra
 >
 > $ax² + bx + c = 0;$
 >
-> **Quadratic Formula**
+> **Quadratic Polynomial Formula**
 >
 > $r_1,r_2 = \dfrac{-b ± \sqrt{b^2 - 4ac}}{2a}$
 
@@ -134,11 +134,20 @@ If the problem at hand involves a quadratic function, then we can use the quadra
 >
 > This formula is ubiquitously used to calculate light effects and general 3D manipulation during the production of games and animation movies.
 >
-> Learn More:
-> - [Quadratic Formula](https://en.wikipedia.org/wiki/Quadratic_formula)
+> **Learn More**:
+> - [Quadratic Polynomial Formula](https://en.wikipedia.org/wiki/Quadratic_formula)
 > - [3D GRAPHING QUADRATIC EQUATIONS WITH SIMULATION METHODOLOGY](https://www.globusjournal.com/wp-content/uploads/2020/03/GMIT-JD15-Rajeev.pdf)
 > - [General Quadratic Equation in 3-D](https://www.maplesoft.com/support/help/maple/view.aspx?path=MathApps%2FGeneralQuadraticEquationIn3D)
 
+There is also a Cubic Polynomial Formula that can be applied to Cubic Functions:
+
+> **Cubic Formula**
+>
+> $x^3 +px + q = 0;$
+>
+> **Cubic Polynomial Formula**
+>
+> $\sqrt[3]{-\dfrac{q}{2} + \sqrt{\dfrac{q^2}{4} + \dfrac{p^3}{27}}} + \sqrt[3]{-\dfrac{q}{2} - \sqrt{\dfrac{q^2}{4} + \dfrac{p^3}{27}}}$
 
 
 ___
