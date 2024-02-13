@@ -15,7 +15,7 @@
   * [Differences & Improved Guesses (Step Size)](#differences--improved-guesses-step-size)
   * [The Newton-Raphson Method](#the-newton-raphson-method)
   * [Finding Roots in the Complex Plane](#finding-roots-in-the-complex-plane)
-  * [Many Seed, Many Guesses](#many-seed-many-guesses)
+  * [Many Seeds, Many Guesses](#many-seeds-many-guesses)
   * [Curiosities of the Complex Plane](#curiosities-of-the-complex-plane)
   * [But what the Chaos is going on here!?](#but-what-the-chaos-is-going-on-here)
   * [The Boundary is the Key](#the-boundary-is-the-key)
@@ -178,13 +178,13 @@ Take our previous polynomial example:
 
 > $P(x) = x^5 + x^2 - x - 0.2 = 0$
 
-The algorithm starts with a random guess, let's call it $X_0$.
+The algorithm starts with a random guess, let's call it $x_0$.
 
-Most likely the initial output of our polynomial at $X_0$ will not be 0, so we haven't found the solution.
+Most likely the initial output of our polynomial at $x_0$ will not be 0, so we haven't found the solution.
 
 > Guess : $x_0 = 1.3$
 
-This return value is some other value that represents the **height** of the curve at $X_0$.
+This return value is some other value that represents the **height** of the curve at $x_0$.
 
 To improve the guess, we have to ask,
 
@@ -224,7 +224,7 @@ So if we rearrange this equation $P'(x_0) =\dfrac{P(x_0)}{-Step}$, we get a simp
 
 > $Step = \dfrac{P(x_0)}{P'(x_0)}$
 
-So the next guess will be $X_1$ adjusted by the step size:
+So the next guess will be $x_1$ adjusted by the step size:
 
 $X_1 = X_0 - \dfrac{P(x_0)}{P'(x_0)}$
 
@@ -246,7 +246,7 @@ ___
 A few intuitions worthy of note:
 - If $P(x_0)$ is really large, and the graph gets real high, we need to take a larger step to get closer to a true root.
 - But if $P'(x_0)$ is also really large, making the slope of the graph steeper, we need to take a smaller step to get closer to a true root.
-- While it works great when we start calculations near a root, where it converges really quickly, if your initial guess is far from a root it can find a couple weaknesses.
+- While it works great when we start calculations near a root, where it converges really quickly, if your initial guess is far from a root this method has a couple weaknesses.
 	- In some cases the sequence of new guesses that we get bounces around the local minimum of a function sitting above the x-axis.
 	- This makes sense since the linear approximation of the function around these values all the way to the right, is entirely unrelated to the nature of the function around its true root. It gives no useful information about the true root.
 	- It is only when by chance this process is able to throw the new guess off far enough to the left that the sequence of new guesses is able to approximate the true root.
@@ -254,7 +254,7 @@ A few intuitions worthy of note:
 ___
 ### The Newton-Raphson Method
 
-This was a method used by Newton to solve polynomial expressions. He made it look much more complicated than it needed to be. Luckily a few years later Joseph Rafson published a simpler, more accessible version much more alike to the method we are discussing. Because of this it is commonly known as the **Newton-Raphson Method**, a recurrent topic in calculus classes.
+This was a method used by Newton to solve polynomial expressions. He made it look much more complicated than it needed to be. Luckily a few years later Joseph Rafson published a simpler, more accessible version much more alike to the method we are discussing  now. Because of this it is commonly known as the **Newton-Raphson Method**, a recurrent topic in calculus classes.
 
 ___
 ### Finding Roots in the Complex Plane
@@ -267,7 +267,7 @@ Even if a polynomial has only a single real number root, we can always factor it
 >
 > Where $r_n = a_n + b_ni$
 
-> This is the **Fundamental Theorem of Algebra**, proved by Carl Friedrich Gauss in 1799. It states that every polynomial equation of degree n with complex number coefficients has n roots, or solutions, in the complex numbers.
+> This is the **Fundamental Theorem of Algebra**, proved by Carl Friedrich Gauss in 1799.
 > - [Fundamental Theorem of Algebra - Britannica](https://www.britannica.com/science/fundamental-theorem-of-algebra)
 
 In the context of functions with real number inputs and outputs, where one can picture the association between inputs and outputs as a graph, Newton's method has straightforward visual meaning with tangent lines intersecting the x-axis.
@@ -278,7 +278,7 @@ Good news is, the formula doesn't care how you visualize it. You can plug Newton
 
 > $P(z) = z^5 + z^2 - z - 0.2 = 0$
 >
-> Arbitrary Seed: $z_0 = 0.5 + 0.5i$
+> Arbitrary Seed: $z_0 = (0.5 + 0.5i)$
 >
 > $z_1 = z_0 - \dfrac{P(z_0)}{P'(z_0)}$
 >
@@ -289,9 +289,9 @@ Good news is, the formula doesn't care how you visualize it. You can plug Newton
 > Even though it is not possible to easily visualize this process, it really is the same logic. We are figuring out where a linear approximation of the function around our guess would equal zero, and then we use that zero of the linear approximation as our next guess.  
 
 ___
-### Many Seed, Many Guesses
+### Many Seeds, Many Guesses
 
-We can apply this idea to many different possible initial guesses simultaneously. With each iteration each dot takes some step based on **Newton's Method**.
+We can apply this idea to many different possible initial guesses simultaneously. With each iteration each dot takes some step based on the **Newton's Method**.
 
 Most of the dots will quickly converge to one of the five roots, but there will be some dots which will start bouncing around. This is the same behavior we saw as when we got stuck bouncing around the local minimum of a function when applying the method to the same polynomial using real numbers.
 
@@ -300,7 +300,7 @@ If we did this for every single dot on the plane and then color each dot based o
 ___
 ### Curiosities of the Complex Plane
 
-There are regions in the complex plane where if you ever so slightly adjust that seed value, it can completely change which of the five true roots a given dot ends up landing on. We saw some for shadowing of this kind of chaos when discussing intuitions related to the real graph and certain the problematic sequences of guesses. But visualizing this on the comp+lx planes trully shines a light on how unpredictable this business of root finding really can be, and how there is an infinity of initial values where this sort of unpredictability can arise.
+There are regions in the complex plane where if you ever so slightly adjust that seed value, it can completely change which of the five true roots a given dot ends up landing on. We had a glimpse of this kind of chaos when discussing intuitions related to the real graph and certain the problematic sequences of guesses. But visualizing this on the complex planes truly shines a light on how unpredictable this business of root finding really can be, and how there is an infinity of initial values where this sort of unpredictability can arise.
 
 Chaos happens at the boundaries between regions.
 
@@ -309,7 +309,7 @@ ___
 
 Yeah, what is it? All we are doing here is solving linear approximations, why would that produce something so endlessly complex?
 
-A reasonable initial guess might have been that each seed value simply tends towards whichever root it's closes to, but if tit was the case, the final image would look like a Voronoi diagrams with straight line boundaries.
+A reasonable initial guess might have been that each seed value simply tends towards whichever root it's closes to, but if it was the case, the final image would look like a Voronoi diagrams with straight line boundaries.
 
 > Learn More:
 > - [Voronoi Diagram](https://en.wikipedia.org/wiki/Voronoi_diagram)
@@ -331,7 +331,7 @@ ___
 
 The key to answering this question is to look at the boundary between regions.
 
-When I mention the word "boundary" you have an intuitive sense of what it means, but mathematicians have a clever way to formalize it that makes it easier to reason when exploring wilder sets like the fractal we are discussing.
+When I mention the word "boundary" you have an intuitive sense of what it means, but mathematicians have a clever way to formalize it that makes it easier to reason when exploring wilder sets like the fractal at hand.
 
 > We say that a point is on the boundary of a set if when you draw a small circle centered at that point, no matter how small, it will always contain points that are both inside that set and outside of it.
 
@@ -339,15 +339,12 @@ If we select a point on the interior of the boundary, a small enough circle woul
 
 But when the point is on the boundary, the circle will contain both points inside and outside of the set.
 
-> One way to formulate this is to say, you draw a circle, no matter how small that circle, it either contains all of the colors (when the shared boundary is inside the circle), or it contains just one color (when the circle is in the interior of a region).
+> A simple way to formulate this is to say, you draw a circle, no matter how small that circle, it either contains all of the colors (when the shared boundary is inside the circle), or it contains just one color (when the circle is in the interior of a region).
 
 What this implies is that you shouldn't be able to find a circle that just contains two of the colors, since that would require you to have points on the boundary between two regions, but not all of them.
 
 This property tells us that, if we are near a sensitive point where some of the seed values go to one root but other seed values go to another, then every root must be accessible by the points in the vicinity of that sensitive point. For any circle you draw, all the points will either tend to one root, or they will tend to all of the roots, they will just tend to a subset of the roots.
 
-But why would this property be true? Where does it come from?
-
-It comes from a field of math called Holomorphic Dynamics
 
 
 ____
