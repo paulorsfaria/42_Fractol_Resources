@@ -11,6 +11,8 @@
     * [Generating the Mandelbrot Set](#generating-the-mandelbrot-set)
 * [Generating the Newton-Raphson Set](#generating-the-newton-raphson-set)
   * [Seeking Polynomial Roots ](#seeking-polynomial-roots-)
+  * [Newton's Method](#newtons-method)
+  * [Differences & Improved Guesses (Step Size)](#differences--improved-guesses-step-size)
 * [Fractal Generation Techniques](#fractal-generation-techniques)
   * [Escape-Time Fractals](#escape-time-fractals)
   * [Iterated Function Systems](#iterated-function-systems)
@@ -124,7 +126,7 @@ If the problem at hand involves a quadratic function, then we can use the quadra
 
 > **Quadratic Function**
 >
-> $ax² + bx + c = 0;$
+> $ax^2 + bx + c = 0;$
 >
 > **Quadratic Polynomial Formula**
 >
@@ -162,6 +164,65 @@ In other words, it is possible to prove that for an extensive set of standard fu
 This unsolvability issue in a way doesn't matter because we have other ways to approximate a solution to this kind of equation with whatever level of precision necessary.
 
 A common way to achieve this is by applying **Newton's Method**.
+
+___
+### Newton's Method
+
+Take our previous polynomial example:
+
+> $P(x) = x^5 + x^2 - x - 0.2 = 0$
+
+The algorithm starts with a random guess, let's call it $X_0$. 
+
+Most likely the initial output of our polynomial at $X_0$ will not be 0, so we haven't found the solution.
+
+Guess : $X_0 = 1.3$.
+
+This return value is some other value that represents the **height** of the curve at $X_0$.
+
+To improve the guess, we have to ask, 
+
+> **When does the linear approximation to the function around that value equal zero?**
+>
+> In other words, if we were to draw a tangent line to the graph at this point, when does this tangent line cross the x-axis?
+
+Assuming that this tangent is a decent approximation of the function in the general vicinity of some true root, the  spot where this approximation equals zero should bring us closer to a true root. 
+
+As long as we are able to take a derivative of this function, (which with polynomials is always a possibility) we can compute the slope of this linear approximation.
+
+### Differences & Improved Guesses (Step Size)
+
+Then how do we find out the difference between the current guess and an improved guess? **What is the size of this step?**
+
+One way to think about this, is to consider the fact that the slope of the tangent line, it's rise being greater than the run, suggests the **height of this graph divided by the length of the step**. 
+
+> **Slope / Tangent**
+>
+> $Slope = \dfrac{P(X_0)}{-Step}$
+
+On the other hand the slope of this tangent line is the derivative of the polynomial at that point.
+
+> **Derivative**
+>
+> $P'(X_0) =\dfrac{P(X_0)}{-Step}$
+>
+> > Taking our previous polynomial example:
+> >
+> > $P(x) = x^5 + x^2 - x - 0.2 = 0$
+> >
+> > We get its derivative as:
+> >
+> > $P'(x) = 5x^4 + 2x - 1$
+
+So if we rearrange this equation $P'(X_0) =\dfrac{P(X_0)}{-Step}$, we get a simple expression that gives us the ability to compute this step size:
+
+> $Step = \dfrac{P(x_0)}{P'(x_0)}$
+
+
+
+
+
+
 
 
 ___
