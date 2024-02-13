@@ -10,6 +10,7 @@
   * [The Mandelbrot Set](#the-mandelbrot-set)
     * [Generating the Mandelbrot Set](#generating-the-mandelbrot-set)
 * [Generating the Newton-Raphson Set](#generating-the-newton-raphson-set)
+  * [Seeking Polynomial Roots ](#seeking-polynomial-roots-)
 * [Fractal Generation Techniques](#fractal-generation-techniques)
   * [Escape-Time Fractals](#escape-time-fractals)
   * [Iterated Function Systems](#iterated-function-systems)
@@ -109,10 +110,9 @@ This polynomial has 3 roots:
 >
 > > Check out its [graph](https://www.desmos.com/calculator/fksk7o2p5l)!
 
-But how do we compute the roots?
+### Seeking Polynomial Roots 
 
-This is a very common question in engineering and computer graphics.
-
+But how do we compute the roots? This is a very common question in engineering and computer graphics.
 
 > [!Note]
 >
@@ -120,6 +120,15 @@ This is a very common question in engineering and computer graphics.
 >
 > [Bezier Curves](https://en.wikipedia.org/wiki/B%C3%A9zier_curve)
 
+If the problem at hand involves a quadratic function, then we can use the quadratic formula:
+
+> **Quadratic Function**
+>
+> $ax² + bx + c = 0;$
+>
+> **Quadratic Formula**
+>
+> $r_1,r_2 = \dfrac{-b ± \sqrt{b^2 - 4ac}}{2a}$
 
 
 
