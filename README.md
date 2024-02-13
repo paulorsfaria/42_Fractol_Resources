@@ -13,6 +13,8 @@
   * [Seeking Polynomial Roots](#seeking-polynomial-roots)
   * [Newton's Method](#newtons-method)
   * [Differences & Improved Guesses (Step Size)](#differences--improved-guesses-step-size)
+  * [The Newton-Raphson Method](#the-newton-raphson-method)
+  * [Finding Roots in the Complex Plane](#finding-roots-in-the-complex-plane)
 * [Fractal Generation Techniques](#fractal-generation-techniques)
   * [Escape-Time Fractals](#escape-time-fractals)
   * [Iterated Function Systems](#iterated-function-systems)
@@ -216,8 +218,6 @@ On the other hand the slope of this tangent line is the derivative of the polyno
 
 So if we rearrange this equation $P'(x_0) =\dfrac{P(x_0)}{-Step}$, we get a simple expression that gives us the ability to compute this step size:
 
-> **Step Size Formula**
->
 > $Step = \dfrac{P(x_0)}{P'(x_0)}$
 
 So the next guess will be $X_1$ adjusted by the step size:
@@ -228,7 +228,33 @@ After that we can repeat the process. We compute the value of this function and 
 
 > Guess : $x_2 = 1.054$
 
-Repeat this process enough times and before too long  we'll find ourselves extremely close to a true root.
+Repeat this process enough times and before too long you'll find yourself extremely close to a true root.
+
+___
+
+So the formula to calculate the next step size is:
+
+> **Step Size Formula**
+>
+> $x_{n+1} = x_n - \dfrac{P(x_0)}{P'(x_0)}$
+
+___
+A few intuitions worthy of note:
+- If $P(x_0)$ is really large, and the graph gets real high, we need to take a larger step to get closer to a true root.
+- But if $P'(x_0)$ is also really large, making the slope of the graph steeper, we need to take a smaller step to get closer to a true root.
+- While it works great when we start calculations near a root, where it converges really quickly, if your initial guess is far from a root it can find a couple weaknesses.
+	- In some cases the sequence of new guesses that we get bounces around the local minimum of a function sitting above the x-axis.
+	- This makes sense since the linear approximation of the function around these values all the way to the right, is entirely unrelated to the nature of the function around its true root. It gives no useful information about the true root.
+	- It is only when by chance this process is able to throw the new guess off far enough to the left that the sequence of new guesses is able to approximate the true root.
+
+___
+### The Newton-Raphson Method
+
+This was a method used by Newton to solve polynomial expressions. He made it look much more complicated than it needed to be. Luckily a few years later Joseph Rafson published a simpler, more accessible version much more alike to the method we are discussing. Because of this it is commonly known as the **Newton-Raphson Method**, a recurrent topic in calculus classes.
+
+___
+### Finding Roots in the Complex Plane
+
 
 
 
