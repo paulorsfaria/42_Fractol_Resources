@@ -31,6 +31,7 @@
     * [Real Numbers](#real-numbers)
     * [Value of i](#value-of-i)
   * [Math Utils](#math-utils)
+  * [Color](#color)
 * [Repos](#repos)
 * [Tools](#tools)
 * [Videos](#videos)
@@ -392,6 +393,10 @@ ___
 - [Value of I - Commonly Used Values of i](https://www.vedantu.com/maths/value-of-i)
 ### Math Utils
 - [How to scale down a range of numbers with a known min and max value](https://stackoverflow.com/questions/5294955/how-to-scale-down-a-range-of-numbers-with-a-known-min-and-max-value)
+### Color
+- [Fractals and multi layer coloring algorithmas : mi.sanu.ac.rs](https://www.mi.sanu.ac.rs/vismath/javier1/)
+- [Fractal Colirng : sekinoworld.com](https://www.sekinoworld.com/fractal/coloring.htm)
+
 ## Repos
 - [fract-ol: graphically beautiful fractals | Medium](https://medium.com/@leogaudin/fract-ol-creating-graphically-beautiful-fractals-6664b6b045b5)
 - [fract-ol — render beautiful sets. | by Braulio Santos | Jan, 2024 | Medium](https://medium.com/@by1jorgesantos/fract-ol-render-beautiful-sets-0699a378b953)
