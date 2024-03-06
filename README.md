@@ -413,6 +413,7 @@ ___
 - [Beyond the Mandelbrot set, an intro to holomorphic dynamics](https://youtu.be/LqbZpur38nw?si=7gpxDJIpsfJYp_0m)
 - [Draw a Pollock painting with the minilibX](https://www.youtube.com/watch?v=9eAPbNUQD1Y)
 - [Introduction to the minilibX : a simple X-Window programming API in C](https://www.youtube.com/watch?v=bYS93r6U0zg&t=0s)
+- [Demo and compilation of the project](https://www.youtube.com/watch?v=f8Wr8XGf2k4)
 ## LaTeX
 - https://wch.github.io/latexsheet/latexsheet-0.png
 - [users.dickinson.edu/\~richesod/latex/latexcheatsheet.pdf](https://users.dickinson.edu/~richesod/latex/latexcheatsheet.pdf)
